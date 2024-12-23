@@ -2,78 +2,77 @@
 
 ![20241121_190408](https://github.com/user-attachments/assets/98b5d0d1-35e8-4e53-99f0-1f9d7d111d01)
 
-## Descrizione
+## Description
 
-L'**ESP32 Solar Monitor** è una configurazione avanzata per ESPHome che integra un display **ESP32-2432S028R** con **Home Assistant**. Questo progetto consente di monitorare in tempo reale i dati del tuo impianto fotovoltaico, tra cui produzione solare, consumo domestico, immissione/prelievo dalla rete e stato della batteria. 
+The **ESP32 Solar Monitor** is an advanced configuration for ESPHome that integrates an **ESP32-2432S028R** display with **Home Assistant**. This project allows real-time monitoring of your photovoltaic system data, including solar production, household consumption, grid import/export, and battery status.
 
-L'interfaccia grafica è sviluppata con **LVGL**, offrendo un design moderno e interattivo con supporto touch.
+The graphical interface is developed with **LVGL**, offering a modern and interactive design with touch support.
 
-## Funzionalità
+## Features
 
-- **Produzione Solare**: Monitoraggio in tempo reale della potenza generata.
-- **Consumo Domestico**: Visualizzazione dell'energia consumata in casa.
-- **Immissione/Prelievo dalla Rete**: Dati sull'energia importata o esportata.
-- **Stato della Batteria**: Percentuale di carica e stato di ricarica/scarica.
-- **Interfaccia Touch**: Navigazione fluida tra le diverse schermate.
-- **Grafici e Indicatori**: Barre di progresso e icone dinamiche per rappresentare i dati.!
+- **Solar Production**: Real-time monitoring of generated power.
+- **Household Consumption**: Display of energy consumed by the house.
+- **Grid Import/Export**: Data on imported or exported energy.
+- **Battery Status**: Charge percentage and charging/discharging status.
+- **Touch Interface**: Smooth navigation between different screens.
+- **Graphs and Indicators**: Progress bars and dynamic icons to represent data.
 
-
-## Requisiti di Sistema
+## System Requirements
 
 - **Hardware**:
-  - ESP32-2432S028R con display TFT e touchscreen.
-  - Inverter fotovoltaico configurato in Home Assistant.
-  - Sensori per produzione, consumo e batteria.
+  - ESP32-2432S028R with TFT display and touchscreen.
+  - Photovoltaic inverter configured in Home Assistant.
+  - Sensors for production, consumption, and battery.
 
 - **Software**:
-  - [ESPHome](https://esphome.io/) configurato nella rete locale.
-  - Font `materialdesignicons-webfont.ttf` da posizionare nella directory `fonts/`.
+  - [ESPHome](https://esphome.io/) configured on the local network.
+  - Font `materialdesignicons-webfont.ttf` placed in the `fonts/` directory.
 
-## Installazione
+## Installation
 
-1. **Clona il repository**:
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/tuonome/esp32-solar-monitor.git
+   git clone https://github.com/yourname/esp32-solar-monitor.git
    cd esp32-solar-monitor
 
-2. **Prepara i file necessari**:
-   - Copia il font `materialdesignicons-webfont.ttf` nella directory `fonts/`.
-   - Configura il file `secrets.yaml` con le tue credenziali Wi-Fi e chiavi API.
+2. **Prepare necessary files**:
+   - Copy the font `materialdesignicons-webfont.ttf` to the `fonts/` directory.
+   - Configure the `secrets.yaml` file with your Wi-Fi credentials and API keys.
 
-3. **Carica la configurazione su ESPHome**:
-   - Modifica i parametri necessari nel file YAML (nome dispositivo, ID delle entità di Home Assistant, ecc.).
-   - Carica la configurazione sul dispositivo ESP32 tramite l'interfaccia ESPHome.
+3. **Upload configuration to ESPHome**:
+   - Modify necessary parameters in the YAML file (device name, Home Assistant entity IDs, etc.).
+   - Upload the configuration to the ESP32 device via the ESPHome interface.
 
-4. **Configura Home Assistant**:
-   - Assicurati che i sensori siano configurati correttamente in Home Assistant per fornire i dati richiesti.
+4. **Configure Home Assistant**:
+   - Ensure sensors are correctly configured in Home Assistant to provide the required data.
 
-## Utilizzo
+## Usage
 
-Dopo l'installazione, l'interfaccia mostrerà:
+After installation, the interface will display:
 
-- **Produzione Solare**: Valore corrente in watt, con barra di progresso.
-- **Consumo Casa**: Energia consumata dalla casa.
-- **Rete**: Energia immessa o prelevata dalla rete.
-- **Batteria**: Stato di carica e flusso di energia (ricarica/scarica).
+- **Solar Production**: Current value in watts, with a progress bar.
+- **Household Consumption**: Energy consumed by the house.
+- **Grid**: Imported or exported energy.
+- **Battery**: Charge status and energy flow (charging/discharging).
 
-Puoi navigare tra le schermate utilizzando il menu interattivo touch nella parte inferiore del display.
+You can navigate between screens using the interactive touch menu at the bottom of the display.
 
-## Personalizzazioni
+## Customizations
 
-- **Font e Stili**: Modifica colori e dimensioni nella sezione `lvgl.theme` del file YAML.
-- **Sensori Home Assistant**: Aggiorna gli ID delle entità nella sezione `sensor` per adattarli alla tua configurazione.
-- **Navigazione e Schermate**: Personalizza layout e contenuti nelle sezioni `lvgl.pages`.
+- **Font and Styles**: Modify colors and sizes in the `lvgl.theme` section of the YAML file.
+- **Home Assistant Sensors**: Update entity IDs in the `sensor` section to match your configuration.
+- **Navigation and Screens**: Customize layout and content in the `lvgl.pages` sections.
 
-## Contribuire
+## Contribute
 
-I contributi sono benvenuti! Per segnalare problemi o proporre miglioramenti, apri una [issue](https://github.com/simone7121/ESPHOME-ESP32_CYD_V2-SmartEnergyMeter/issues) o invia una pull request. 
+Contributions are welcome! To report issues or suggest improvements, open an [issue](https://github.com/simone7121/ESPHOME-ESP32_CYD_V2-SmartEnergyMeter/issues) or submit a pull request.
 
-## Licenza
+## License
 
-Questo progetto è distribuito sotto licenza **GPL V3**. Per maggiori dettagli, consulta il file [LICENSE](LICENSE).
+This project is distributed under the **GPL V3** license. For more details, see the [LICENSE](LICENSE) file.
 
-## Autore
+## Author
 
-Sviluppato con passione da **[Simone7121]**.
+Developed with passion by **[Simone7121]**.
 
-Per ulteriori informazioni o domande, contatta [info@simonedanna.it](mailto:info@simonedanna.it).
+For more information or questions, contact [info@simonedanna.it](mailto:info@simonedanna.it).

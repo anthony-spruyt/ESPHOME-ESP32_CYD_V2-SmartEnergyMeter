@@ -321,43 +321,43 @@ lvgl:
       height: 30                                       # Fixed height
 
   top_layer:
-  widgets:
-    - buttonmatrix:                                  # Navigation menu at the bottom of the screen
-        align: bottom_mid                            # Positioned at the bottom center
-        styles: header_footer                        # Style defined for the header/footer
-        pad_all: 0                                   # No padding
-        outline_width: 0                             # Outline width
-        id: top_layer
-        items:                                       # Menu items
-          styles: header_footer
-        rows:                                        # Buttons configuration
-          - buttons:
-            - id: page_prev                          # Previous page button
-              text: "\uF053"                         # Icon for previous page
-              on_press:
-                then:
-                  lvgl.page.previous:                # Action to show the previous page
-            - id: page_home                          # Home page button
-              text: "\uF015"                         # Icon for home
-              on_press:
-                then:
-                  lvgl.page.show: main_page          # Action to show the main page
-            - id: page_next                          # Next page button
-              text: "\uF054"                         # Icon for next page
-              on_press:
-                then:
-                  lvgl.page.next:                    # Action to show the next page
-    - label:                                         # Label for client status
-        text: "\uF1EB"                               # Icon for status
-        id: lbl_hastatus
-        hidden: true                                 # Initially hidden
-        align: bottom_mid                            # Align bottom center
-        x: -30                                       # Horizontal offset
-        y: -8                                        # Vertical offset
-        text_align: center                           # Center text
-        text_color: 0xFFFFFF                         # White color
+    widgets:
+      - buttonmatrix:                                  # Navigation menu at the bottom of the screen
+          align: bottom_mid                            # Positioned at the bottom center
+          styles: header_footer                        # Style defined for the header/footer
+          pad_all: 0                                   # No padding
+          outline_width: 0                             # Outline width
+          id: top_layer
+          items:                                       # Menu items
+            styles: header_footer
+          rows:                                        # Buttons configuration
+            - buttons:
+              - id: page_prev                          # Previous page button
+                text: "\uF053"                         # Icon for previous page
+                on_press:
+                  then:
+                    lvgl.page.previous:                # Action to show the previous page
+              - id: page_home                          # Home page button
+                text: "\uF015"                         # Icon for home
+                on_press:
+                  then:
+                    lvgl.page.show: main_page          # Action to show the main page
+              - id: page_next                          # Next page button
+                text: "\uF054"                         # Icon for next page
+                on_press:
+                  then:
+                    lvgl.page.next:                    # Action to show the next page
+      - label:                                         # Label for client status
+          text: "\uF1EB"                               # Icon for status
+          id: lbl_hastatus
+          hidden: true                                 # Initially hidden
+          align: bottom_mid                            # Align bottom center
+          x: -30                                       # Horizontal offset
+          y: -8                                        # Vertical offset
+          text_align: center                           # Center text
+          text_color: 0xFFFFFF                         # White color
 
-pages:
+  pages:
   - id: main_page                                    # Main page
     widgets:
 
@@ -484,7 +484,7 @@ pages:
           text_color: orange                         # Orange color
           text_font: montserrat_20                   # Font size 20
 
-buffer_size: 0.6                                     # Buffer size for rendering (DO NOT CHANGE OTHERWISE IT CRASHES DUE TO PSRAM SHORTAGE)
+  buffer_size: 0.6                                     # Buffer size for rendering (DO NOT CHANGE OTHERWISE IT CRASHES DUE TO PSRAM SHORTAGE)
 
 # ============================()=============================== 
 

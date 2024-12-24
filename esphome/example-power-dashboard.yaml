@@ -1,0 +1,10 @@
+substitutions:
+  device_name: example-power-dashboard
+  device_friendly_name: example-power-dashboard
+  sensor_generation: sensor.example_generation
+  sensor_export: sensor.example_export
+  sensor_consumption: sensor.example_consumption
+  sensor_import: sensor.example_import
+
+packages:
+  device: !include packages/devices/.power-dashboard.yaml
